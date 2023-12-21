@@ -1,0 +1,322 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &129324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 477454}
+  - 120: {fileID: 12036074}
+  m_Layer: 10
+  m_Name: LineRenderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &155592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 471540}
+  - 114: {fileID: 11486742}
+  m_Layer: 10
+  m_Name: Laser Shot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471540
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.360504, y: 0.3118, z: -6.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 477454}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &477454
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129324}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 471540}
+  m_RootOrder: 0
+--- !u!114 &11486742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c3243e1e7803e46a051c8ab0c0bfc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stats:
+    Title: LAZOR
+    weaponType: 2
+    DamageType: 0
+    Speed: 80
+    Damage: 66
+    MaxDistance: 20
+    Lifetime: 0.52
+    Bouncer: 0
+    UsePhysics: 1
+    ConstantForce: 1
+    MoveStyle: 1
+    CauseAoeDamage: 0
+    AoeEffect: {fileID: 0}
+    AoeRadius: 0
+    AoeForce: 0
+    BeamRadius: 1
+  Mask:
+    serializedVersion: 2
+    m_Bits: 29440
+  StopMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  AttackEffect: {fileID: 108492, guid: 0556ef70bb7b10744ad810323337a417, type: 2}
+  ImpactTagNames:
+  - Flesh
+  - Metal
+  - Wood
+  - Concrete
+  ImpactSounds:
+  - {fileID: 8300000, guid: 0f8dd633cebaf0742a5c6d4f6ed143e9, type: 3}
+  - {fileID: 8300000, guid: aa878cc5ad42445429605609814d6e86, type: 3}
+  - {fileID: 8300000, guid: 85f17507cd8d5264dabad78ff7e40e4f, type: 3}
+  - {fileID: 8300000, guid: 18dcd2bee6fc57a46aaea506d7664786, type: 3}
+  ImpactEffects:
+  - {fileID: 175584, guid: c3da58ec4508f6c45914f13bf7d85b86, type: 2}
+  - {fileID: 108492, guid: a35585e39931b004581c813a05d4e464, type: 2}
+  - {fileID: 108796, guid: 4985bb6db4521f241aafef500f3df43a, type: 2}
+  - {fileID: 108796, guid: d4b26e99c63e0cb41b52507daf7eb056, type: 2}
+  ImpactStyle: 1
+  Owner: {fileID: 0}
+  OwnerCollider: {fileID: 0}
+  DetachOnDestroy: {fileID: 0}
+  LineRenderer: {fileID: 12036074}
+  TrailAlphaStart:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 3.5
+      outSlope: 3.5
+      tangentMode: 10
+    - time: 0.1
+      value: 0.35
+      inSlope: 0.5
+      outSlope: 0.5
+      tangentMode: 10
+    - time: 0.2
+      value: 0.1
+      inSlope: -1.5833334
+      outSlope: -1.5833334
+      tangentMode: 10
+    - time: 0.35
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  TrailAlphaEnd:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 18.284866
+      outSlope: 18.284866
+      tangentMode: 10
+    - time: 0.05197293
+      value: 0.95031804
+      inSlope: 5.7069335
+      outSlope: 5.7069335
+      tangentMode: 10
+    - time: 0.1337904
+      value: 0.38815022
+      inSlope: -5.7320595
+      outSlope: -5.7320595
+      tangentMode: 10
+    - time: 0.21057686
+      value: 0.03546079
+      inSlope: -0.22813678
+      outSlope: -0.22813678
+      tangentMode: 0
+    - time: 0.564268
+      value: 0.0126621425
+      inSlope: 0.00045763413
+      outSlope: 0.00045763413
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: -0.029059473
+      outSlope: -0.029059473
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  TrailUvCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: -2.7500093
+      outSlope: -2.7500093
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  TrailStartColor: {r: 0.6397059, g: 0.30103806, b: 0.30103806, a: 1}
+  TrailEndColor: {r: 1, g: 0.64137924, b: 0, a: 1}
+  TrailUvSpeed: 0.46
+  TrailTiling: {x: 20, y: 1}
+  OffsetRngMin: 3.7777777
+  OffsetRngMax: 9.111111
+  LogDebug: 0
+--- !u!120 &12036074
+LineRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129324}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 3b8e2ae5cb1c5d14380b0188c24ec85e, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    startWidth: 0.2
+    endWidth: 0.2
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4278190080
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4278190080
+  m_UseWorldSpace: 1
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: lengthInSec
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Scalar.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Scalar.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startColor.maxColor.rgba
+      value: 4286686653
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ColorModule.gradient.maxGradient.key0.rgba
+      value: 515175679
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ColorModule.gradient.maxGradient.key1.rgba
+      value: 241598588
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startSize.scalar
+      value: .0799999982
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startSize.minCurve.m_Curve.Array.data[0].value
+      value: .625
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.m_StartColor.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.m_EndColor.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b8e2ae5cb1c5d14380b0188c24ec85e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.startWidth
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.endWidth
+      value: 0.2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 155592}
+  m_IsPrefabParent: 1

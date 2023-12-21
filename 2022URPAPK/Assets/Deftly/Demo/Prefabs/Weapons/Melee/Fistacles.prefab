@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &163010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 451398}
+  - component: {fileID: 11490718}
+  - component: {fileID: 6570760}
+  m_Layer: 0
+  m_Name: Fistacles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &451398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163010}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.000000044703484, z: 0, w: -1}
+  m_LocalPosition: {x: 4.3445406, y: 0.1, z: -11.277075}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11490718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1746e4e4ff931b3489f0d2a0a5512059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stats:
+    Title: Fists
+    WeaponType: 1
+    UiImage: {fileID: 21300000, guid: 44a9637b717632a4d959f44319729c93, type: 3}
+    FireStyle: 0
+    EffectiveRange: 1.7
+    SwapTime: 0.2
+    TypeId: 1
+    NonDominantHandGoal: {fileID: 0}
+    NonDominantHandPos: {x: 0, y: 0, z: 0}
+    NonDominantHandRot: {x: 0, y: 0, z: 0}
+    WeaponInHandOffset: {fileID: 0}
+    NonDominantElbowOffset: {x: 0, y: 0, z: 0}
+    DominantElbowOffset: {x: 0, y: 0, z: 0}
+    UseElbowHintL: 0
+    UseElbowHintR: 0
+    MountPivot: 1
+    PositionOffset: {x: 0.08, y: 0.05, z: 0.03}
+    RotationOffset: {x: 0, y: 0, z: 0}
+    WeaponHeldInHand: 0
+    Recoil: {x: 20, y: 0.08, z: -0.07}
+    RecoilCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    RecoilChaos: 1
+    FireSound: {fileID: 0}
+    FiresProjectile: {fileID: 0}
+    ProjectileSpawnPoints: []
+    NoAmmoSound: {fileID: 0}
+    ReloadSound: {fileID: 0}
+    AmmoEjector: {fileID: 0}
+    ReloadTime: 0
+    AmmoCost: 1
+    StartingMagazines: 8
+    MagazineSize: 6
+    MagazineMaxCount: 5
+    CurrentMagazines: 8
+    CurrentAmmo: 6
+    AutoReload: 0
+    TimeToCooldown: 0.2
+    Accuracy: 1
+    AccuracyCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    CanHitMultiples: 1
+    CanAttackAndMove: 0
+    WeaponTrail: {fileID: 0}
+  ProjectileSpawnPoints: []
+  FireSounds:
+  - {fileID: 8300000, guid: 2ce19f7d70e7942428f8e1b4300a8aec, type: 3}
+  - {fileID: 8300000, guid: e47e1797c27d74143a32da5479ca2036, type: 3}
+  AttackPrefabs:
+  - {fileID: 137156, guid: 86a94a958942eb441844d768ab6a9e79, type: 3}
+  - {fileID: 137156, guid: 687059580bb9b5940942823592cc9519, type: 3}
+  Attacks:
+  - {fileID: 0}
+  ImpactTagNames:
+  - Metal
+  - Flesh
+  ImpactSounds:
+  - {fileID: 8300000, guid: 5b8f9531b934b4b4e9e0b78fa226c5dc, type: 3}
+  - {fileID: 8300000, guid: 961264bef8d57aa479560970fd058473, type: 3}
+  ImpactEffects:
+  - {fileID: 108492, guid: a35585e39931b004581c813a05d4e464, type: 3}
+  - {fileID: 108492, guid: adedf1141fdfda942808f6d9948de73b, type: 3}
+  Mask:
+    serializedVersion: 2
+    m_Bits: 8960
+  PickupReference: {fileID: 161458, guid: 042f2c6694d984447bb91889060cf339, type: 3}
+  Owner: {fileID: 0}
+  MyOwnerCollider: {fileID: 0}
+  IsReloading: 0
+  Attacking: 0
+  Attacking2: 0
+  DoingMeleeSwing: 0
+  InputPermission: 1
+  WeaponIsOnCooldown: 0
+--- !u!65 &6570760
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163010}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.75, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
