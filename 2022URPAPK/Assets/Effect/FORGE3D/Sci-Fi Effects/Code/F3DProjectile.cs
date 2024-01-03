@@ -12,6 +12,7 @@ namespace FORGE3D
         public float velocity = 300f; // Projectile velocity
         public float RaycastAdvance = 2f; // Raycast advance multiplier 
         public bool DelayDespawn = false; // Projectile despawn flag 
+        public int damageValue = 1;
         public ParticleSystem[] delayedParticles; // Array of delayed particles
         ParticleSystem[] particles; // Array of projectile particles 
         new Transform transform; // Cached transform 
@@ -75,7 +76,16 @@ namespace FORGE3D
         void ApplyForce(float force)
         {
             if (hitPoint.rigidbody != null)
+            {
                 hitPoint.rigidbody.AddForceAtPosition(transform.forward*force, hitPoint.point, ForceMode.VelocityChange);
+                var damage = hitPoint.rigidbody.GetComponent<Damage>();
+                if (damage)
+                {
+                    damage.SetDamage(damageValue);
+                }
+            }
+
+            
         }
 
         void Update()
